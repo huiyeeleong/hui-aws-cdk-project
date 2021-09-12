@@ -1,6 +1,6 @@
 Welcome to my first CDK project.
 
-Please remember run AWS Configure to use the AWS CDK Environment.
+Please remember run AWS Configure to use the AWS CDK Environment. - https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html
 
 🧰 Prerequisites
 
