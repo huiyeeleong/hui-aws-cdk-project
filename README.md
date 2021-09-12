@@ -20,7 +20,8 @@ Virtualenv - pip3 install virtualenv
 # If you DONT have cdk installed
 npm install -g aws-cdk
 # If this is first time you are using cdk then, run cdk bootstrap
-# cdk bootstrap
+
+cdk bootstrap
 
 
 # Make sure you in root directory
