@@ -31,15 +31,33 @@ class AwsCdkEc2Stack(cdk.Stack):
         mode="r") as file:
             user_data = file.read()
 
+        #Get the latest ami - linux
+        amazon_linux_ami = _ec2.MachineImage.latest_amazon_linux(
+            generation = _ec2.AmazonLinuxGeneration.AMAZON_LINUX_2,
+            edition = _ec2.AmazonLinuxEdition.STANDARD,
+            storage = _ec2.AmazonLinuxStorage.EBS,
+            virtualization = _ec2.AmazonLinuxVirt.HVM
+        )
+
+        #Get the latest ami - Windows
+        windows_ami = _ec2.MachineImage.latest_windows(
+            version = _ec2.WindowsVersion.WINDOWS_SERVER_1709_ENGLISH_CORE_BASE
+        )
+
         #Launch ec2 instance
         hui_ec2 = _ec2.Instance(
             self,
             "huiec2id",
             instance_type=_ec2.InstanceType(instance_type_identifier="t2.micro"),
             instance_name="HuiInstanceBuiltFromCDK",
-            machine_image=_ec2.MachineImage.generic_linux(
-                {"ap-southeast-2": "ami-09b446f12369c169d"}
-            ),
+
+            #machine_image=_ec2.MachineImage.generic_linux(
+            #    {"ap-southeast-2": "ami-09b446f12369c169d"}
+            #),
+
+            #Best Practice not to hard code AMI
+            machine_image = amazon_linux_ami,
+
             #Select the VPC to use
             vpc = vpc,
             vpc_subnets=_ec2.SubnetSelection(
