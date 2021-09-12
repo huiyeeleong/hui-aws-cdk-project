@@ -50,7 +50,8 @@ class AwsCdkEc2Stack(cdk.Stack):
             "huiec2id",
             instance_type=_ec2.InstanceType(instance_type_identifier="t2.micro"),
             instance_name="HuiInstanceBuiltFromCDK",
-
+            
+            #Do not hard code the AMI ID
             #machine_image=_ec2.MachineImage.generic_linux(
             #    {"ap-southeast-2": "ami-09b446f12369c169d"}
             #),
@@ -66,8 +67,24 @@ class AwsCdkEc2Stack(cdk.Stack):
 
             #run bootstrap scripts
             user_data = _ec2.UserData.custom(user_data)
-
         )
+
+        #Add EBS Volume with provisioned IOPS storage
+        hui_ec2.instance.add_property_override( 
+            "BlockDeviceMappings", [
+                {
+                    "DeviceName": "/dev/sdb",
+                    "EBS": {
+                        "VolumeSize": "20",
+                        "VolumeType": "io1",
+                        "Iops": "400",
+                        "DeleteOnTermination": "true"
+                    }
+                }
+            ]
+        )
+        
+
         #instance output public ip address
         output1 = core.CfnOutput(
             self,
