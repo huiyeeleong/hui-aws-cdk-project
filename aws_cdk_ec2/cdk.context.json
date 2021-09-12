@@ -1,0 +1,76 @@
+{
+  "vpc-provider:account=673569942958:filter.vpc-id=vpc-d21e0fb0:region=ap-southeast-2:returnAsymmetricSubnets=true": {
+    "vpcId": "vpc-d21e0fb0",
+    "vpcCidrBlock": "10.66.64.0/19",
+    "availabilityZones": [],
+    "vpnGatewayId": "vgw-bcc7f6a1",
+    "subnetGroups": [
+      {
+        "name": "Private",
+        "type": "Private",
+        "subnets": [
+          {
+            "subnetId": "subnet-0bf6c97f",
+            "cidr": "10.66.68.0/22",
+            "availabilityZone": "ap-southeast-2a",
+            "routeTableId": "rtb-bf6171dd"
+          },
+          {
+            "subnetId": "subnet-493a363e",
+            "cidr": "10.66.82.0/24",
+            "availabilityZone": "ap-southeast-2a",
+            "routeTableId": "rtb-bf6171dd"
+          },
+          {
+            "subnetId": "subnet-9f6c8ffb",
+            "cidr": "10.66.83.0/24",
+            "availabilityZone": "ap-southeast-2b",
+            "routeTableId": "rtb-bd6171df"
+          },
+          {
+            "subnetId": "subnet-f4c6d496",
+            "cidr": "10.66.72.0/22",
+            "availabilityZone": "ap-southeast-2b",
+            "routeTableId": "rtb-bd6171df"
+          },
+          {
+            "subnetId": "subnet-419c8107",
+            "cidr": "10.66.76.0/22",
+            "availabilityZone": "ap-southeast-2c",
+            "routeTableId": "rtb-995d4dfc"
+          },
+          {
+            "subnetId": "subnet-4e9c8108",
+            "cidr": "10.66.84.0/24",
+            "availabilityZone": "ap-southeast-2c",
+            "routeTableId": "rtb-995d4dfc"
+          }
+        ]
+      },
+      {
+        "name": "Public",
+        "type": "Public",
+        "subnets": [
+          {
+            "subnetId": "subnet-f4f6c980",
+            "cidr": "10.66.64.0/23",
+            "availabilityZone": "ap-southeast-2a",
+            "routeTableId": "rtb-bc6171de"
+          },
+          {
+            "subnetId": "subnet-f5c6d497",
+            "cidr": "10.66.66.0/23",
+            "availabilityZone": "ap-southeast-2b",
+            "routeTableId": "rtb-bc6171de"
+          },
+          {
+            "subnetId": "subnet-409c8106",
+            "cidr": "10.66.80.0/23",
+            "availabilityZone": "ap-southeast-2c",
+            "routeTableId": "rtb-bc6171de"
+          }
+        ]
+      }
+    ]
+  }
+}
