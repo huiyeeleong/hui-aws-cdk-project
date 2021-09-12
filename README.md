@@ -1,19 +1,28 @@
 Welcome to my first CDK project.
-Here you will learn to use CDK to deploy different AWS resources. 
+
+Please remember run AWS Configure to use the AWS CDK Environment. - https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html
 
 🧰 Prerequisites
+
 🛠 AWS CLI Installed & Configured - https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html
+
 🛠 AWS CDK Installed & Configured - https://docs.aws.amazon.com/cdk/latest/guide/getting_started.html
+
 🛠 Python Packages, Change the below commands to suit your operating system, the following are written for _Amazon Linux 2
+
 Python3 - yum install -y python3
+
 Python Pip - yum install -y python-pip
+
 Virtualenv - pip3 install virtualenv
+
 
 🚀 Deployment using AWS CDK
 # If you DONT have cdk installed
 npm install -g aws-cdk
 # If this is first time you are using cdk then, run cdk bootstrap
-# cdk bootstrap
+
+cdk bootstrap
 
 
 # Make sure you in root directory
