@@ -81,7 +81,7 @@ class AwsCdkHaWebServerStack(cdk.Stack):
                 subnet_type=_ec2.SubnetType.PRIVATE
             ),
             instance_type=_ec2.InstanceType(
-                instance_type_identifier="t2.micro",
+                instance_type_identifier="t2.micro"),
                 machine_image = linux_ami,
                 role=hui_web_server_role,
                 min_capacity=2,
@@ -91,7 +91,8 @@ class AwsCdkHaWebServerStack(cdk.Stack):
                     user_data
                 )
             )
-        )
+        
+        
         #Alow ASG security group receive traffic from ALB
         hui_web_server_asg.connections.allow_from(
             alb, _ec2.Port.tcp(80),
