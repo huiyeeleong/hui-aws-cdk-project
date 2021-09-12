@@ -24,6 +24,12 @@ class AwsCdkEc2Stack(cdk.Stack):
             vpc_id="vpc-d21e0fb0"
         )
 
+        #read bootstrap script
+        #read my local bootstrap file
+        with open("/Users/huiyeeleong/Desktop/hui-aws-cdk-project/aws_cdk_ec2/bootstrap_scripts/install_httpd.sh", 
+        mode="r") as file:
+            user_data = file.read()
+
         #Launch ec2 instance
         hui_ec2 = _ec2.Instance(
             self,
@@ -37,5 +43,23 @@ class AwsCdkEc2Stack(cdk.Stack):
             vpc = vpc,
             vpc_subnets=_ec2.SubnetSelection(
                 subnet_type=_ec2.SubnetType.PUBLIC
-            )        
+            ),            
+
+            #run bootstrap scripts
+            user_data = _ec2.UserData.custom(user_data)
+
         )
+        #instance output public ip address
+        output1 = core.CfnOutput(
+            self,
+            "huiinstance1",
+            description="Hui Web Server Public Ip Address",
+            value=f"http://{hui_ec2.instance_public_ip}"
+        )
+
+        #security group
+        #allow web traffic inbound
+        hui_ec2.connections.allow_from_any_ipv4(
+            _ec2.Port.tcp(80), description="Allow Web Traffic"
+        )
+    
