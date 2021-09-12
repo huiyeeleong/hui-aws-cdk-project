@@ -2,7 +2,9 @@ Welcome to my first CDK project.
 Here you will learn to use CDK to deploy different AWS resources. 
 
 🧰 Prerequisites
+
 🛠 AWS CLI Installed & Configured - https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html
+
 🛠 AWS CDK Installed & Configured - https://docs.aws.amazon.com/cdk/latest/guide/getting_started.html
 🛠 Python Packages, Change the below commands to suit your operating system, the following are written for _Amazon Linux 2
 Python3 - yum install -y python3
