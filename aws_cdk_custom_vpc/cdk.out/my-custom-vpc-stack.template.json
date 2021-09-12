@@ -1,0 +1,754 @@
+{
+  "Resources": {
+    "huicustomVPCCD5268CA": {
+      "Type": "AWS::EC2::VPC",
+      "Properties": {
+        "CidrBlock": "10.0.0.0/16",
+        "EnableDnsHostnames": true,
+        "EnableDnsSupport": true,
+        "InstanceTenancy": "default",
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "my-custom-vpc-stack/huicustomVPC"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "my-custom-vpc-stack/huicustomVPC/Resource"
+      }
+    },
+    "huicustomVPCpublicSubnetSubnet1Subnet0BC93EFC": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "CidrBlock": "10.0.0.0/24",
+        "VpcId": {
+          "Ref": "huicustomVPCCD5268CA"
+        },
+        "AvailabilityZone": {
+          "Fn::Select": [
+            0,
+            {
+              "Fn::GetAZs": ""
+            }
+          ]
+        },
+        "MapPublicIpOnLaunch": true,
+        "Tags": [
+          {
+            "Key": "aws-cdk:subnet-name",
+            "Value": "publicSubnet"
+          },
+          {
+            "Key": "aws-cdk:subnet-type",
+            "Value": "Public"
+          },
+          {
+            "Key": "Name",
+            "Value": "my-custom-vpc-stack/huicustomVPC/publicSubnetSubnet1"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "my-custom-vpc-stack/huicustomVPC/publicSubnetSubnet1/Subnet"
+      }
+    },
+    "huicustomVPCpublicSubnetSubnet1RouteTableC5A1714A": {
+      "Type": "AWS::EC2::RouteTable",
+      "Properties": {
+        "VpcId": {
+          "Ref": "huicustomVPCCD5268CA"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "my-custom-vpc-stack/huicustomVPC/publicSubnetSubnet1"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "my-custom-vpc-stack/huicustomVPC/publicSubnetSubnet1/RouteTable"
+      }
+    },
+    "huicustomVPCpublicSubnetSubnet1RouteTableAssociation3546E5E0": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "huicustomVPCpublicSubnetSubnet1RouteTableC5A1714A"
+        },
+        "SubnetId": {
+          "Ref": "huicustomVPCpublicSubnetSubnet1Subnet0BC93EFC"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "my-custom-vpc-stack/huicustomVPC/publicSubnetSubnet1/RouteTableAssociation"
+      }
+    },
+    "huicustomVPCpublicSubnetSubnet1DefaultRoute0DC60664": {
+      "Type": "AWS::EC2::Route",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "huicustomVPCpublicSubnetSubnet1RouteTableC5A1714A"
+        },
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "GatewayId": {
+          "Ref": "huicustomVPCIGW4D8ADFBE"
+        }
+      },
+      "DependsOn": [
+        "huicustomVPCVPCGW19B9A225"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "my-custom-vpc-stack/huicustomVPC/publicSubnetSubnet1/DefaultRoute"
+      }
+    },
+    "huicustomVPCpublicSubnetSubnet1EIP045D2F47": {
+      "Type": "AWS::EC2::EIP",
+      "Properties": {
+        "Domain": "vpc",
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "my-custom-vpc-stack/huicustomVPC/publicSubnetSubnet1"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "my-custom-vpc-stack/huicustomVPC/publicSubnetSubnet1/EIP"
+      }
+    },
+    "huicustomVPCpublicSubnetSubnet1NATGateway232B423B": {
+      "Type": "AWS::EC2::NatGateway",
+      "Properties": {
+        "SubnetId": {
+          "Ref": "huicustomVPCpublicSubnetSubnet1Subnet0BC93EFC"
+        },
+        "AllocationId": {
+          "Fn::GetAtt": [
+            "huicustomVPCpublicSubnetSubnet1EIP045D2F47",
+            "AllocationId"
+          ]
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "my-custom-vpc-stack/huicustomVPC/publicSubnetSubnet1"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "my-custom-vpc-stack/huicustomVPC/publicSubnetSubnet1/NATGateway"
+      }
+    },
+    "huicustomVPCpublicSubnetSubnet2Subnet40EFEAB0": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "CidrBlock": "10.0.1.0/24",
+        "VpcId": {
+          "Ref": "huicustomVPCCD5268CA"
+        },
+        "AvailabilityZone": {
+          "Fn::Select": [
+            1,
+            {
+              "Fn::GetAZs": ""
+            }
+          ]
+        },
+        "MapPublicIpOnLaunch": true,
+        "Tags": [
+          {
+            "Key": "aws-cdk:subnet-name",
+            "Value": "publicSubnet"
+          },
+          {
+            "Key": "aws-cdk:subnet-type",
+            "Value": "Public"
+          },
+          {
+            "Key": "Name",
+            "Value": "my-custom-vpc-stack/huicustomVPC/publicSubnetSubnet2"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "my-custom-vpc-stack/huicustomVPC/publicSubnetSubnet2/Subnet"
+      }
+    },
+    "huicustomVPCpublicSubnetSubnet2RouteTable6BF91CCD": {
+      "Type": "AWS::EC2::RouteTable",
+      "Properties": {
+        "VpcId": {
+          "Ref": "huicustomVPCCD5268CA"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "my-custom-vpc-stack/huicustomVPC/publicSubnetSubnet2"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "my-custom-vpc-stack/huicustomVPC/publicSubnetSubnet2/RouteTable"
+      }
+    },
+    "huicustomVPCpublicSubnetSubnet2RouteTableAssociationEC991CBA": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "huicustomVPCpublicSubnetSubnet2RouteTable6BF91CCD"
+        },
+        "SubnetId": {
+          "Ref": "huicustomVPCpublicSubnetSubnet2Subnet40EFEAB0"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "my-custom-vpc-stack/huicustomVPC/publicSubnetSubnet2/RouteTableAssociation"
+      }
+    },
+    "huicustomVPCpublicSubnetSubnet2DefaultRouteAAF92AB1": {
+      "Type": "AWS::EC2::Route",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "huicustomVPCpublicSubnetSubnet2RouteTable6BF91CCD"
+        },
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "GatewayId": {
+          "Ref": "huicustomVPCIGW4D8ADFBE"
+        }
+      },
+      "DependsOn": [
+        "huicustomVPCVPCGW19B9A225"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "my-custom-vpc-stack/huicustomVPC/publicSubnetSubnet2/DefaultRoute"
+      }
+    },
+    "huicustomVPCprivateSubnetSubnet1Subnet1C00E196": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "CidrBlock": "10.0.2.0/24",
+        "VpcId": {
+          "Ref": "huicustomVPCCD5268CA"
+        },
+        "AvailabilityZone": {
+          "Fn::Select": [
+            0,
+            {
+              "Fn::GetAZs": ""
+            }
+          ]
+        },
+        "MapPublicIpOnLaunch": false,
+        "Tags": [
+          {
+            "Key": "aws-cdk:subnet-name",
+            "Value": "privateSubnet"
+          },
+          {
+            "Key": "aws-cdk:subnet-type",
+            "Value": "Private"
+          },
+          {
+            "Key": "Name",
+            "Value": "my-custom-vpc-stack/huicustomVPC/privateSubnetSubnet1"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "my-custom-vpc-stack/huicustomVPC/privateSubnetSubnet1/Subnet"
+      }
+    },
+    "huicustomVPCprivateSubnetSubnet1RouteTable96A3404D": {
+      "Type": "AWS::EC2::RouteTable",
+      "Properties": {
+        "VpcId": {
+          "Ref": "huicustomVPCCD5268CA"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "my-custom-vpc-stack/huicustomVPC/privateSubnetSubnet1"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "my-custom-vpc-stack/huicustomVPC/privateSubnetSubnet1/RouteTable"
+      }
+    },
+    "huicustomVPCprivateSubnetSubnet1RouteTableAssociation36C4BD9E": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "huicustomVPCprivateSubnetSubnet1RouteTable96A3404D"
+        },
+        "SubnetId": {
+          "Ref": "huicustomVPCprivateSubnetSubnet1Subnet1C00E196"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "my-custom-vpc-stack/huicustomVPC/privateSubnetSubnet1/RouteTableAssociation"
+      }
+    },
+    "huicustomVPCprivateSubnetSubnet1DefaultRoute94258089": {
+      "Type": "AWS::EC2::Route",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "huicustomVPCprivateSubnetSubnet1RouteTable96A3404D"
+        },
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "NatGatewayId": {
+          "Ref": "huicustomVPCpublicSubnetSubnet1NATGateway232B423B"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "my-custom-vpc-stack/huicustomVPC/privateSubnetSubnet1/DefaultRoute"
+      }
+    },
+    "huicustomVPCprivateSubnetSubnet2Subnet53E73EE7": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "CidrBlock": "10.0.3.0/24",
+        "VpcId": {
+          "Ref": "huicustomVPCCD5268CA"
+        },
+        "AvailabilityZone": {
+          "Fn::Select": [
+            1,
+            {
+              "Fn::GetAZs": ""
+            }
+          ]
+        },
+        "MapPublicIpOnLaunch": false,
+        "Tags": [
+          {
+            "Key": "aws-cdk:subnet-name",
+            "Value": "privateSubnet"
+          },
+          {
+            "Key": "aws-cdk:subnet-type",
+            "Value": "Private"
+          },
+          {
+            "Key": "Name",
+            "Value": "my-custom-vpc-stack/huicustomVPC/privateSubnetSubnet2"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "my-custom-vpc-stack/huicustomVPC/privateSubnetSubnet2/Subnet"
+      }
+    },
+    "huicustomVPCprivateSubnetSubnet2RouteTable07061063": {
+      "Type": "AWS::EC2::RouteTable",
+      "Properties": {
+        "VpcId": {
+          "Ref": "huicustomVPCCD5268CA"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "my-custom-vpc-stack/huicustomVPC/privateSubnetSubnet2"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "my-custom-vpc-stack/huicustomVPC/privateSubnetSubnet2/RouteTable"
+      }
+    },
+    "huicustomVPCprivateSubnetSubnet2RouteTableAssociation49B43F10": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "huicustomVPCprivateSubnetSubnet2RouteTable07061063"
+        },
+        "SubnetId": {
+          "Ref": "huicustomVPCprivateSubnetSubnet2Subnet53E73EE7"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "my-custom-vpc-stack/huicustomVPC/privateSubnetSubnet2/RouteTableAssociation"
+      }
+    },
+    "huicustomVPCprivateSubnetSubnet2DefaultRoute67A94314": {
+      "Type": "AWS::EC2::Route",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "huicustomVPCprivateSubnetSubnet2RouteTable07061063"
+        },
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "NatGatewayId": {
+          "Ref": "huicustomVPCpublicSubnetSubnet1NATGateway232B423B"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "my-custom-vpc-stack/huicustomVPC/privateSubnetSubnet2/DefaultRoute"
+      }
+    },
+    "huicustomVPCdbSubnetSubnet1SubnetFB1A7B50": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "CidrBlock": "10.0.4.0/24",
+        "VpcId": {
+          "Ref": "huicustomVPCCD5268CA"
+        },
+        "AvailabilityZone": {
+          "Fn::Select": [
+            0,
+            {
+              "Fn::GetAZs": ""
+            }
+          ]
+        },
+        "MapPublicIpOnLaunch": false,
+        "Tags": [
+          {
+            "Key": "aws-cdk:subnet-name",
+            "Value": "dbSubnet"
+          },
+          {
+            "Key": "aws-cdk:subnet-type",
+            "Value": "Isolated"
+          },
+          {
+            "Key": "Name",
+            "Value": "my-custom-vpc-stack/huicustomVPC/dbSubnetSubnet1"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "my-custom-vpc-stack/huicustomVPC/dbSubnetSubnet1/Subnet"
+      }
+    },
+    "huicustomVPCdbSubnetSubnet1RouteTable14FD04A9": {
+      "Type": "AWS::EC2::RouteTable",
+      "Properties": {
+        "VpcId": {
+          "Ref": "huicustomVPCCD5268CA"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "my-custom-vpc-stack/huicustomVPC/dbSubnetSubnet1"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "my-custom-vpc-stack/huicustomVPC/dbSubnetSubnet1/RouteTable"
+      }
+    },
+    "huicustomVPCdbSubnetSubnet1RouteTableAssociationB565A055": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "huicustomVPCdbSubnetSubnet1RouteTable14FD04A9"
+        },
+        "SubnetId": {
+          "Ref": "huicustomVPCdbSubnetSubnet1SubnetFB1A7B50"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "my-custom-vpc-stack/huicustomVPC/dbSubnetSubnet1/RouteTableAssociation"
+      }
+    },
+    "huicustomVPCdbSubnetSubnet2SubnetC6F912A4": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "CidrBlock": "10.0.5.0/24",
+        "VpcId": {
+          "Ref": "huicustomVPCCD5268CA"
+        },
+        "AvailabilityZone": {
+          "Fn::Select": [
+            1,
+            {
+              "Fn::GetAZs": ""
+            }
+          ]
+        },
+        "MapPublicIpOnLaunch": false,
+        "Tags": [
+          {
+            "Key": "aws-cdk:subnet-name",
+            "Value": "dbSubnet"
+          },
+          {
+            "Key": "aws-cdk:subnet-type",
+            "Value": "Isolated"
+          },
+          {
+            "Key": "Name",
+            "Value": "my-custom-vpc-stack/huicustomVPC/dbSubnetSubnet2"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "my-custom-vpc-stack/huicustomVPC/dbSubnetSubnet2/Subnet"
+      }
+    },
+    "huicustomVPCdbSubnetSubnet2RouteTable18311A9E": {
+      "Type": "AWS::EC2::RouteTable",
+      "Properties": {
+        "VpcId": {
+          "Ref": "huicustomVPCCD5268CA"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "my-custom-vpc-stack/huicustomVPC/dbSubnetSubnet2"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "my-custom-vpc-stack/huicustomVPC/dbSubnetSubnet2/RouteTable"
+      }
+    },
+    "huicustomVPCdbSubnetSubnet2RouteTableAssociationD841D304": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "huicustomVPCdbSubnetSubnet2RouteTable18311A9E"
+        },
+        "SubnetId": {
+          "Ref": "huicustomVPCdbSubnetSubnet2SubnetC6F912A4"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "my-custom-vpc-stack/huicustomVPC/dbSubnetSubnet2/RouteTableAssociation"
+      }
+    },
+    "huicustomVPCIGW4D8ADFBE": {
+      "Type": "AWS::EC2::InternetGateway",
+      "Properties": {
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "my-custom-vpc-stack/huicustomVPC"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "my-custom-vpc-stack/huicustomVPC/IGW"
+      }
+    },
+    "huicustomVPCVPCGW19B9A225": {
+      "Type": "AWS::EC2::VPCGatewayAttachment",
+      "Properties": {
+        "VpcId": {
+          "Ref": "huicustomVPCCD5268CA"
+        },
+        "InternetGatewayId": {
+          "Ref": "huicustomVPCIGW4D8ADFBE"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "my-custom-vpc-stack/huicustomVPC/VPCGW"
+      }
+    },
+    "CDKMetadata": {
+      "Type": "AWS::CDK::Metadata",
+      "Properties": {
+        "Analytics": "v2:deflate64:H4sIAAAAAAAA/0VPuw7CMAz8FvaQQlkYQRVCXVBUUPfUGBFaHJQ4IFT132l4Zbrz3flkz+U8z+VsstIPP4Vjm/VgHcp+zxpaUaG3wQGKwpJnF4BFcaKknmg0joaNpUHEBoRc9vUNolWrQqjQdAb2oSF8ryZW2cB40E2HSU/a2nsLRsfifziSTaki7DRvNeNDP4Vy5j7SVFwSoxv5L/C55DutefzrfEXiYRDqyWdL2UIuZT65eGOmLhCbK8rqgy8/jDZSHQEAAA=="
+      },
+      "Metadata": {
+        "aws:cdk:path": "my-custom-vpc-stack/CDKMetadata/Default"
+      },
+      "Condition": "CDKMetadataAvailable"
+    }
+  },
+  "Conditions": {
+    "CDKMetadataAvailable": {
+      "Fn::Or": [
+        {
+          "Fn::Or": [
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "af-south-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-east-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-northeast-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-northeast-2"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-south-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-southeast-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-southeast-2"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ca-central-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "cn-north-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "cn-northwest-1"
+              ]
+            }
+          ]
+        },
+        {
+          "Fn::Or": [
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-central-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-north-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-south-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-west-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-west-2"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-west-3"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "me-south-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "sa-east-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "us-east-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "us-east-2"
+              ]
+            }
+          ]
+        },
+        {
+          "Fn::Or": [
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "us-west-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "us-west-2"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

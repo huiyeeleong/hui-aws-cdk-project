@@ -1,0 +1,13 @@
+{
+  "Resources": {
+    "CDKMetadata": {
+      "Type": "AWS::CDK::Metadata",
+      "Properties": {
+        "Analytics": "v2:deflate64:H4sIAAAAAAAA/zPUMzQy0jNQdEgsL9ZNTsnWT84vStWrDi5JTM7Wcc7PKy4pKk0u0XFOywtKLc4vLUpOrdUJqCzJyM/TN9az0DNSzCrOzNQtKs0rycxN1QuC0AAYx4SaVQAAAA=="
+      },
+      "Metadata": {
+        "aws:cdk:path": "AwsCdkCustomVpcStack/CDKMetadata/Default"
+      }
+    }
+  }
+}

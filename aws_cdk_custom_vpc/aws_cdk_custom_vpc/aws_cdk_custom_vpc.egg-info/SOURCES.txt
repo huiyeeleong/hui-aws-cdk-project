@@ -1,0 +1,7 @@
+README.md
+setup.py
+aws_cdk_custom_vpc/aws_cdk_custom_vpc.egg-info/PKG-INFO
+aws_cdk_custom_vpc/aws_cdk_custom_vpc.egg-info/SOURCES.txt
+aws_cdk_custom_vpc/aws_cdk_custom_vpc.egg-info/dependency_links.txt
+aws_cdk_custom_vpc/aws_cdk_custom_vpc.egg-info/requires.txt
+aws_cdk_custom_vpc/aws_cdk_custom_vpc.egg-info/top_level.txt

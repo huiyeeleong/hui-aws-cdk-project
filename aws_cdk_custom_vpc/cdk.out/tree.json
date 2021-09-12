@@ -1,0 +1,850 @@
+{
+  "version": "tree-0.1",
+  "tree": {
+    "id": "App",
+    "path": "",
+    "children": {
+      "Tree": {
+        "id": "Tree",
+        "path": "Tree",
+        "constructInfo": {
+          "fqn": "@aws-cdk/core.Construct",
+          "version": "1.122.0"
+        }
+      },
+      "my-custom-vpc-stack": {
+        "id": "my-custom-vpc-stack",
+        "path": "my-custom-vpc-stack",
+        "children": {
+          "huicustomVPC": {
+            "id": "huicustomVPC",
+            "path": "my-custom-vpc-stack/huicustomVPC",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "my-custom-vpc-stack/huicustomVPC/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::EC2::VPC",
+                  "aws:cdk:cloudformation:props": {
+                    "cidrBlock": "10.0.0.0/16",
+                    "enableDnsHostnames": true,
+                    "enableDnsSupport": true,
+                    "instanceTenancy": "default",
+                    "tags": [
+                      {
+                        "key": "Name",
+                        "value": "my-custom-vpc-stack/huicustomVPC"
+                      }
+                    ]
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ec2.CfnVPC",
+                  "version": "1.122.0"
+                }
+              },
+              "publicSubnetSubnet1": {
+                "id": "publicSubnetSubnet1",
+                "path": "my-custom-vpc-stack/huicustomVPC/publicSubnetSubnet1",
+                "children": {
+                  "Subnet": {
+                    "id": "Subnet",
+                    "path": "my-custom-vpc-stack/huicustomVPC/publicSubnetSubnet1/Subnet",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
+                      "aws:cdk:cloudformation:props": {
+                        "cidrBlock": "10.0.0.0/24",
+                        "vpcId": {
+                          "Ref": "huicustomVPCCD5268CA"
+                        },
+                        "availabilityZone": {
+                          "Fn::Select": [
+                            0,
+                            {
+                              "Fn::GetAZs": ""
+                            }
+                          ]
+                        },
+                        "mapPublicIpOnLaunch": true,
+                        "tags": [
+                          {
+                            "key": "aws-cdk:subnet-name",
+                            "value": "publicSubnet"
+                          },
+                          {
+                            "key": "aws-cdk:subnet-type",
+                            "value": "Public"
+                          },
+                          {
+                            "key": "Name",
+                            "value": "my-custom-vpc-stack/huicustomVPC/publicSubnetSubnet1"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnSubnet",
+                      "version": "1.122.0"
+                    }
+                  },
+                  "Acl": {
+                    "id": "Acl",
+                    "path": "my-custom-vpc-stack/huicustomVPC/publicSubnetSubnet1/Acl",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.Resource",
+                      "version": "1.122.0"
+                    }
+                  },
+                  "RouteTable": {
+                    "id": "RouteTable",
+                    "path": "my-custom-vpc-stack/huicustomVPC/publicSubnetSubnet1/RouteTable",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::RouteTable",
+                      "aws:cdk:cloudformation:props": {
+                        "vpcId": {
+                          "Ref": "huicustomVPCCD5268CA"
+                        },
+                        "tags": [
+                          {
+                            "key": "Name",
+                            "value": "my-custom-vpc-stack/huicustomVPC/publicSubnetSubnet1"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnRouteTable",
+                      "version": "1.122.0"
+                    }
+                  },
+                  "RouteTableAssociation": {
+                    "id": "RouteTableAssociation",
+                    "path": "my-custom-vpc-stack/huicustomVPC/publicSubnetSubnet1/RouteTableAssociation",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::SubnetRouteTableAssociation",
+                      "aws:cdk:cloudformation:props": {
+                        "routeTableId": {
+                          "Ref": "huicustomVPCpublicSubnetSubnet1RouteTableC5A1714A"
+                        },
+                        "subnetId": {
+                          "Ref": "huicustomVPCpublicSubnetSubnet1Subnet0BC93EFC"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnSubnetRouteTableAssociation",
+                      "version": "1.122.0"
+                    }
+                  },
+                  "DefaultRoute": {
+                    "id": "DefaultRoute",
+                    "path": "my-custom-vpc-stack/huicustomVPC/publicSubnetSubnet1/DefaultRoute",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::Route",
+                      "aws:cdk:cloudformation:props": {
+                        "routeTableId": {
+                          "Ref": "huicustomVPCpublicSubnetSubnet1RouteTableC5A1714A"
+                        },
+                        "destinationCidrBlock": "0.0.0.0/0",
+                        "gatewayId": {
+                          "Ref": "huicustomVPCIGW4D8ADFBE"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnRoute",
+                      "version": "1.122.0"
+                    }
+                  },
+                  "EIP": {
+                    "id": "EIP",
+                    "path": "my-custom-vpc-stack/huicustomVPC/publicSubnetSubnet1/EIP",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::EIP",
+                      "aws:cdk:cloudformation:props": {
+                        "domain": "vpc",
+                        "tags": [
+                          {
+                            "key": "Name",
+                            "value": "my-custom-vpc-stack/huicustomVPC/publicSubnetSubnet1"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnEIP",
+                      "version": "1.122.0"
+                    }
+                  },
+                  "NATGateway": {
+                    "id": "NATGateway",
+                    "path": "my-custom-vpc-stack/huicustomVPC/publicSubnetSubnet1/NATGateway",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::NatGateway",
+                      "aws:cdk:cloudformation:props": {
+                        "subnetId": {
+                          "Ref": "huicustomVPCpublicSubnetSubnet1Subnet0BC93EFC"
+                        },
+                        "allocationId": {
+                          "Fn::GetAtt": [
+                            "huicustomVPCpublicSubnetSubnet1EIP045D2F47",
+                            "AllocationId"
+                          ]
+                        },
+                        "tags": [
+                          {
+                            "key": "Name",
+                            "value": "my-custom-vpc-stack/huicustomVPC/publicSubnetSubnet1"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnNatGateway",
+                      "version": "1.122.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ec2.PublicSubnet",
+                  "version": "1.122.0"
+                }
+              },
+              "publicSubnetSubnet2": {
+                "id": "publicSubnetSubnet2",
+                "path": "my-custom-vpc-stack/huicustomVPC/publicSubnetSubnet2",
+                "children": {
+                  "Subnet": {
+                    "id": "Subnet",
+                    "path": "my-custom-vpc-stack/huicustomVPC/publicSubnetSubnet2/Subnet",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
+                      "aws:cdk:cloudformation:props": {
+                        "cidrBlock": "10.0.1.0/24",
+                        "vpcId": {
+                          "Ref": "huicustomVPCCD5268CA"
+                        },
+                        "availabilityZone": {
+                          "Fn::Select": [
+                            1,
+                            {
+                              "Fn::GetAZs": ""
+                            }
+                          ]
+                        },
+                        "mapPublicIpOnLaunch": true,
+                        "tags": [
+                          {
+                            "key": "aws-cdk:subnet-name",
+                            "value": "publicSubnet"
+                          },
+                          {
+                            "key": "aws-cdk:subnet-type",
+                            "value": "Public"
+                          },
+                          {
+                            "key": "Name",
+                            "value": "my-custom-vpc-stack/huicustomVPC/publicSubnetSubnet2"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnSubnet",
+                      "version": "1.122.0"
+                    }
+                  },
+                  "Acl": {
+                    "id": "Acl",
+                    "path": "my-custom-vpc-stack/huicustomVPC/publicSubnetSubnet2/Acl",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.Resource",
+                      "version": "1.122.0"
+                    }
+                  },
+                  "RouteTable": {
+                    "id": "RouteTable",
+                    "path": "my-custom-vpc-stack/huicustomVPC/publicSubnetSubnet2/RouteTable",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::RouteTable",
+                      "aws:cdk:cloudformation:props": {
+                        "vpcId": {
+                          "Ref": "huicustomVPCCD5268CA"
+                        },
+                        "tags": [
+                          {
+                            "key": "Name",
+                            "value": "my-custom-vpc-stack/huicustomVPC/publicSubnetSubnet2"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnRouteTable",
+                      "version": "1.122.0"
+                    }
+                  },
+                  "RouteTableAssociation": {
+                    "id": "RouteTableAssociation",
+                    "path": "my-custom-vpc-stack/huicustomVPC/publicSubnetSubnet2/RouteTableAssociation",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::SubnetRouteTableAssociation",
+                      "aws:cdk:cloudformation:props": {
+                        "routeTableId": {
+                          "Ref": "huicustomVPCpublicSubnetSubnet2RouteTable6BF91CCD"
+                        },
+                        "subnetId": {
+                          "Ref": "huicustomVPCpublicSubnetSubnet2Subnet40EFEAB0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnSubnetRouteTableAssociation",
+                      "version": "1.122.0"
+                    }
+                  },
+                  "DefaultRoute": {
+                    "id": "DefaultRoute",
+                    "path": "my-custom-vpc-stack/huicustomVPC/publicSubnetSubnet2/DefaultRoute",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::Route",
+                      "aws:cdk:cloudformation:props": {
+                        "routeTableId": {
+                          "Ref": "huicustomVPCpublicSubnetSubnet2RouteTable6BF91CCD"
+                        },
+                        "destinationCidrBlock": "0.0.0.0/0",
+                        "gatewayId": {
+                          "Ref": "huicustomVPCIGW4D8ADFBE"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnRoute",
+                      "version": "1.122.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ec2.PublicSubnet",
+                  "version": "1.122.0"
+                }
+              },
+              "privateSubnetSubnet1": {
+                "id": "privateSubnetSubnet1",
+                "path": "my-custom-vpc-stack/huicustomVPC/privateSubnetSubnet1",
+                "children": {
+                  "Subnet": {
+                    "id": "Subnet",
+                    "path": "my-custom-vpc-stack/huicustomVPC/privateSubnetSubnet1/Subnet",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
+                      "aws:cdk:cloudformation:props": {
+                        "cidrBlock": "10.0.2.0/24",
+                        "vpcId": {
+                          "Ref": "huicustomVPCCD5268CA"
+                        },
+                        "availabilityZone": {
+                          "Fn::Select": [
+                            0,
+                            {
+                              "Fn::GetAZs": ""
+                            }
+                          ]
+                        },
+                        "mapPublicIpOnLaunch": false,
+                        "tags": [
+                          {
+                            "key": "aws-cdk:subnet-name",
+                            "value": "privateSubnet"
+                          },
+                          {
+                            "key": "aws-cdk:subnet-type",
+                            "value": "Private"
+                          },
+                          {
+                            "key": "Name",
+                            "value": "my-custom-vpc-stack/huicustomVPC/privateSubnetSubnet1"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnSubnet",
+                      "version": "1.122.0"
+                    }
+                  },
+                  "Acl": {
+                    "id": "Acl",
+                    "path": "my-custom-vpc-stack/huicustomVPC/privateSubnetSubnet1/Acl",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.Resource",
+                      "version": "1.122.0"
+                    }
+                  },
+                  "RouteTable": {
+                    "id": "RouteTable",
+                    "path": "my-custom-vpc-stack/huicustomVPC/privateSubnetSubnet1/RouteTable",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::RouteTable",
+                      "aws:cdk:cloudformation:props": {
+                        "vpcId": {
+                          "Ref": "huicustomVPCCD5268CA"
+                        },
+                        "tags": [
+                          {
+                            "key": "Name",
+                            "value": "my-custom-vpc-stack/huicustomVPC/privateSubnetSubnet1"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnRouteTable",
+                      "version": "1.122.0"
+                    }
+                  },
+                  "RouteTableAssociation": {
+                    "id": "RouteTableAssociation",
+                    "path": "my-custom-vpc-stack/huicustomVPC/privateSubnetSubnet1/RouteTableAssociation",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::SubnetRouteTableAssociation",
+                      "aws:cdk:cloudformation:props": {
+                        "routeTableId": {
+                          "Ref": "huicustomVPCprivateSubnetSubnet1RouteTable96A3404D"
+                        },
+                        "subnetId": {
+                          "Ref": "huicustomVPCprivateSubnetSubnet1Subnet1C00E196"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnSubnetRouteTableAssociation",
+                      "version": "1.122.0"
+                    }
+                  },
+                  "DefaultRoute": {
+                    "id": "DefaultRoute",
+                    "path": "my-custom-vpc-stack/huicustomVPC/privateSubnetSubnet1/DefaultRoute",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::Route",
+                      "aws:cdk:cloudformation:props": {
+                        "routeTableId": {
+                          "Ref": "huicustomVPCprivateSubnetSubnet1RouteTable96A3404D"
+                        },
+                        "destinationCidrBlock": "0.0.0.0/0",
+                        "natGatewayId": {
+                          "Ref": "huicustomVPCpublicSubnetSubnet1NATGateway232B423B"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnRoute",
+                      "version": "1.122.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ec2.PrivateSubnet",
+                  "version": "1.122.0"
+                }
+              },
+              "privateSubnetSubnet2": {
+                "id": "privateSubnetSubnet2",
+                "path": "my-custom-vpc-stack/huicustomVPC/privateSubnetSubnet2",
+                "children": {
+                  "Subnet": {
+                    "id": "Subnet",
+                    "path": "my-custom-vpc-stack/huicustomVPC/privateSubnetSubnet2/Subnet",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
+                      "aws:cdk:cloudformation:props": {
+                        "cidrBlock": "10.0.3.0/24",
+                        "vpcId": {
+                          "Ref": "huicustomVPCCD5268CA"
+                        },
+                        "availabilityZone": {
+                          "Fn::Select": [
+                            1,
+                            {
+                              "Fn::GetAZs": ""
+                            }
+                          ]
+                        },
+                        "mapPublicIpOnLaunch": false,
+                        "tags": [
+                          {
+                            "key": "aws-cdk:subnet-name",
+                            "value": "privateSubnet"
+                          },
+                          {
+                            "key": "aws-cdk:subnet-type",
+                            "value": "Private"
+                          },
+                          {
+                            "key": "Name",
+                            "value": "my-custom-vpc-stack/huicustomVPC/privateSubnetSubnet2"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnSubnet",
+                      "version": "1.122.0"
+                    }
+                  },
+                  "Acl": {
+                    "id": "Acl",
+                    "path": "my-custom-vpc-stack/huicustomVPC/privateSubnetSubnet2/Acl",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.Resource",
+                      "version": "1.122.0"
+                    }
+                  },
+                  "RouteTable": {
+                    "id": "RouteTable",
+                    "path": "my-custom-vpc-stack/huicustomVPC/privateSubnetSubnet2/RouteTable",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::RouteTable",
+                      "aws:cdk:cloudformation:props": {
+                        "vpcId": {
+                          "Ref": "huicustomVPCCD5268CA"
+                        },
+                        "tags": [
+                          {
+                            "key": "Name",
+                            "value": "my-custom-vpc-stack/huicustomVPC/privateSubnetSubnet2"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnRouteTable",
+                      "version": "1.122.0"
+                    }
+                  },
+                  "RouteTableAssociation": {
+                    "id": "RouteTableAssociation",
+                    "path": "my-custom-vpc-stack/huicustomVPC/privateSubnetSubnet2/RouteTableAssociation",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::SubnetRouteTableAssociation",
+                      "aws:cdk:cloudformation:props": {
+                        "routeTableId": {
+                          "Ref": "huicustomVPCprivateSubnetSubnet2RouteTable07061063"
+                        },
+                        "subnetId": {
+                          "Ref": "huicustomVPCprivateSubnetSubnet2Subnet53E73EE7"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnSubnetRouteTableAssociation",
+                      "version": "1.122.0"
+                    }
+                  },
+                  "DefaultRoute": {
+                    "id": "DefaultRoute",
+                    "path": "my-custom-vpc-stack/huicustomVPC/privateSubnetSubnet2/DefaultRoute",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::Route",
+                      "aws:cdk:cloudformation:props": {
+                        "routeTableId": {
+                          "Ref": "huicustomVPCprivateSubnetSubnet2RouteTable07061063"
+                        },
+                        "destinationCidrBlock": "0.0.0.0/0",
+                        "natGatewayId": {
+                          "Ref": "huicustomVPCpublicSubnetSubnet1NATGateway232B423B"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnRoute",
+                      "version": "1.122.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ec2.PrivateSubnet",
+                  "version": "1.122.0"
+                }
+              },
+              "dbSubnetSubnet1": {
+                "id": "dbSubnetSubnet1",
+                "path": "my-custom-vpc-stack/huicustomVPC/dbSubnetSubnet1",
+                "children": {
+                  "Subnet": {
+                    "id": "Subnet",
+                    "path": "my-custom-vpc-stack/huicustomVPC/dbSubnetSubnet1/Subnet",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
+                      "aws:cdk:cloudformation:props": {
+                        "cidrBlock": "10.0.4.0/24",
+                        "vpcId": {
+                          "Ref": "huicustomVPCCD5268CA"
+                        },
+                        "availabilityZone": {
+                          "Fn::Select": [
+                            0,
+                            {
+                              "Fn::GetAZs": ""
+                            }
+                          ]
+                        },
+                        "mapPublicIpOnLaunch": false,
+                        "tags": [
+                          {
+                            "key": "aws-cdk:subnet-name",
+                            "value": "dbSubnet"
+                          },
+                          {
+                            "key": "aws-cdk:subnet-type",
+                            "value": "Isolated"
+                          },
+                          {
+                            "key": "Name",
+                            "value": "my-custom-vpc-stack/huicustomVPC/dbSubnetSubnet1"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnSubnet",
+                      "version": "1.122.0"
+                    }
+                  },
+                  "Acl": {
+                    "id": "Acl",
+                    "path": "my-custom-vpc-stack/huicustomVPC/dbSubnetSubnet1/Acl",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.Resource",
+                      "version": "1.122.0"
+                    }
+                  },
+                  "RouteTable": {
+                    "id": "RouteTable",
+                    "path": "my-custom-vpc-stack/huicustomVPC/dbSubnetSubnet1/RouteTable",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::RouteTable",
+                      "aws:cdk:cloudformation:props": {
+                        "vpcId": {
+                          "Ref": "huicustomVPCCD5268CA"
+                        },
+                        "tags": [
+                          {
+                            "key": "Name",
+                            "value": "my-custom-vpc-stack/huicustomVPC/dbSubnetSubnet1"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnRouteTable",
+                      "version": "1.122.0"
+                    }
+                  },
+                  "RouteTableAssociation": {
+                    "id": "RouteTableAssociation",
+                    "path": "my-custom-vpc-stack/huicustomVPC/dbSubnetSubnet1/RouteTableAssociation",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::SubnetRouteTableAssociation",
+                      "aws:cdk:cloudformation:props": {
+                        "routeTableId": {
+                          "Ref": "huicustomVPCdbSubnetSubnet1RouteTable14FD04A9"
+                        },
+                        "subnetId": {
+                          "Ref": "huicustomVPCdbSubnetSubnet1SubnetFB1A7B50"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnSubnetRouteTableAssociation",
+                      "version": "1.122.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ec2.PrivateSubnet",
+                  "version": "1.122.0"
+                }
+              },
+              "dbSubnetSubnet2": {
+                "id": "dbSubnetSubnet2",
+                "path": "my-custom-vpc-stack/huicustomVPC/dbSubnetSubnet2",
+                "children": {
+                  "Subnet": {
+                    "id": "Subnet",
+                    "path": "my-custom-vpc-stack/huicustomVPC/dbSubnetSubnet2/Subnet",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
+                      "aws:cdk:cloudformation:props": {
+                        "cidrBlock": "10.0.5.0/24",
+                        "vpcId": {
+                          "Ref": "huicustomVPCCD5268CA"
+                        },
+                        "availabilityZone": {
+                          "Fn::Select": [
+                            1,
+                            {
+                              "Fn::GetAZs": ""
+                            }
+                          ]
+                        },
+                        "mapPublicIpOnLaunch": false,
+                        "tags": [
+                          {
+                            "key": "aws-cdk:subnet-name",
+                            "value": "dbSubnet"
+                          },
+                          {
+                            "key": "aws-cdk:subnet-type",
+                            "value": "Isolated"
+                          },
+                          {
+                            "key": "Name",
+                            "value": "my-custom-vpc-stack/huicustomVPC/dbSubnetSubnet2"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnSubnet",
+                      "version": "1.122.0"
+                    }
+                  },
+                  "Acl": {
+                    "id": "Acl",
+                    "path": "my-custom-vpc-stack/huicustomVPC/dbSubnetSubnet2/Acl",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.Resource",
+                      "version": "1.122.0"
+                    }
+                  },
+                  "RouteTable": {
+                    "id": "RouteTable",
+                    "path": "my-custom-vpc-stack/huicustomVPC/dbSubnetSubnet2/RouteTable",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::RouteTable",
+                      "aws:cdk:cloudformation:props": {
+                        "vpcId": {
+                          "Ref": "huicustomVPCCD5268CA"
+                        },
+                        "tags": [
+                          {
+                            "key": "Name",
+                            "value": "my-custom-vpc-stack/huicustomVPC/dbSubnetSubnet2"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnRouteTable",
+                      "version": "1.122.0"
+                    }
+                  },
+                  "RouteTableAssociation": {
+                    "id": "RouteTableAssociation",
+                    "path": "my-custom-vpc-stack/huicustomVPC/dbSubnetSubnet2/RouteTableAssociation",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::SubnetRouteTableAssociation",
+                      "aws:cdk:cloudformation:props": {
+                        "routeTableId": {
+                          "Ref": "huicustomVPCdbSubnetSubnet2RouteTable18311A9E"
+                        },
+                        "subnetId": {
+                          "Ref": "huicustomVPCdbSubnetSubnet2SubnetC6F912A4"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnSubnetRouteTableAssociation",
+                      "version": "1.122.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ec2.PrivateSubnet",
+                  "version": "1.122.0"
+                }
+              },
+              "IGW": {
+                "id": "IGW",
+                "path": "my-custom-vpc-stack/huicustomVPC/IGW",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::EC2::InternetGateway",
+                  "aws:cdk:cloudformation:props": {
+                    "tags": [
+                      {
+                        "key": "Name",
+                        "value": "my-custom-vpc-stack/huicustomVPC"
+                      }
+                    ]
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ec2.CfnInternetGateway",
+                  "version": "1.122.0"
+                }
+              },
+              "VPCGW": {
+                "id": "VPCGW",
+                "path": "my-custom-vpc-stack/huicustomVPC/VPCGW",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::EC2::VPCGatewayAttachment",
+                  "aws:cdk:cloudformation:props": {
+                    "vpcId": {
+                      "Ref": "huicustomVPCCD5268CA"
+                    },
+                    "internetGatewayId": {
+                      "Ref": "huicustomVPCIGW4D8ADFBE"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ec2.CfnVPCGatewayAttachment",
+                  "version": "1.122.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-ec2.Vpc",
+              "version": "1.122.0"
+            }
+          },
+          "CDKMetadata": {
+            "id": "CDKMetadata",
+            "path": "my-custom-vpc-stack/CDKMetadata",
+            "children": {
+              "Default": {
+                "id": "Default",
+                "path": "my-custom-vpc-stack/CDKMetadata/Default",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.CfnResource",
+                  "version": "1.122.0"
+                }
+              },
+              "Condition": {
+                "id": "Condition",
+                "path": "my-custom-vpc-stack/CDKMetadata/Condition",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.CfnCondition",
+                  "version": "1.122.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Construct",
+              "version": "1.122.0"
+            }
+          }
+        },
+        "constructInfo": {
+          "fqn": "@aws-cdk/core.Stack",
+          "version": "1.122.0"
+        }
+      }
+    },
+    "constructInfo": {
+      "fqn": "@aws-cdk/core.App",
+      "version": "1.122.0"
+    }
+  }
+}

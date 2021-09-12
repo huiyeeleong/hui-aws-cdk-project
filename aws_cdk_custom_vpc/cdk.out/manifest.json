@@ -1,0 +1,657 @@
+{
+  "version": "14.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "my-custom-vpc-stack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "my-custom-vpc-stack.template.json",
+        "validateOnSynth": false
+      },
+      "metadata": {
+        "/my-custom-vpc-stack/huicustomVPC/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "huicustomVPCCD5268CA",
+            "trace": [
+              "new Vpc (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:384:25)",
+              "/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8795:24)",
+              "Kernel._create (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8367:34)",
+              "Kernel.create (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9692:36)",
+              "KernelHost.run (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/my-custom-vpc-stack/huicustomVPC/publicSubnetSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "huicustomVPCpublicSubnetSubnet1Subnet0BC93EFC",
+            "trace": [
+              "new Subnet (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:708:24)",
+              "new PublicSubnet (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:873:9)",
+              "/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:606:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:590:32)",
+              "Vpc.createSubnets (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:581:18)",
+              "new Vpc (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:405:14)",
+              "/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8795:24)",
+              "Kernel._create (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8367:34)",
+              "Kernel.create (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9692:36)",
+              "KernelHost.run (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/my-custom-vpc-stack/huicustomVPC/publicSubnetSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "huicustomVPCpublicSubnetSubnet1RouteTableC5A1714A",
+            "trace": [
+              "new Subnet (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:724:23)",
+              "new PublicSubnet (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:873:9)",
+              "/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:606:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:590:32)",
+              "Vpc.createSubnets (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:581:18)",
+              "new Vpc (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:405:14)",
+              "/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8795:24)",
+              "Kernel._create (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8367:34)",
+              "Kernel.create (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9692:36)",
+              "KernelHost.run (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/my-custom-vpc-stack/huicustomVPC/publicSubnetSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "huicustomVPCpublicSubnetSubnet1RouteTableAssociation3546E5E0",
+            "trace": [
+              "new Subnet (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:729:9)",
+              "new PublicSubnet (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:873:9)",
+              "/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:606:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:590:32)",
+              "Vpc.createSubnets (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:581:18)",
+              "new Vpc (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:405:14)",
+              "/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8795:24)",
+              "Kernel._create (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8367:34)",
+              "Kernel.create (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9692:36)",
+              "KernelHost.run (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/my-custom-vpc-stack/huicustomVPC/publicSubnetSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "huicustomVPCpublicSubnetSubnet1DefaultRoute0DC60664",
+            "trace": [
+              "PublicSubnet.addDefaultInternetRoute (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:764:23)",
+              "/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:417:30",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:416:32)",
+              "/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8795:24)",
+              "Kernel._create (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8367:34)",
+              "Kernel.create (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9692:36)",
+              "KernelHost.run (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/my-custom-vpc-stack/huicustomVPC/publicSubnetSubnet1/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "huicustomVPCpublicSubnetSubnet1EIP045D2F47",
+            "trace": [
+              "PublicSubnet.addNatGateway (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:893:27)",
+              "NatGatewayProvider.configureNat (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/nat.js:82:33)",
+              "Vpc.createNatGateways (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:564:18)",
+              "new Vpc (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:422:22)",
+              "/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8795:24)",
+              "Kernel._create (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8367:34)",
+              "Kernel.create (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9692:36)",
+              "KernelHost.run (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/my-custom-vpc-stack/huicustomVPC/publicSubnetSubnet1/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "huicustomVPCpublicSubnetSubnet1NATGateway232B423B",
+            "trace": [
+              "PublicSubnet.addNatGateway (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:891:21)",
+              "NatGatewayProvider.configureNat (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/nat.js:82:33)",
+              "Vpc.createNatGateways (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:564:18)",
+              "new Vpc (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:422:22)",
+              "/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8795:24)",
+              "Kernel._create (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8367:34)",
+              "Kernel.create (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9692:36)",
+              "KernelHost.run (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/my-custom-vpc-stack/huicustomVPC/publicSubnetSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "huicustomVPCpublicSubnetSubnet2Subnet40EFEAB0",
+            "trace": [
+              "new Subnet (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:708:24)",
+              "new PublicSubnet (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:873:9)",
+              "/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:606:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:590:32)",
+              "Vpc.createSubnets (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:581:18)",
+              "new Vpc (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:405:14)",
+              "/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8795:24)",
+              "Kernel._create (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8367:34)",
+              "Kernel.create (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9692:36)",
+              "KernelHost.run (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/my-custom-vpc-stack/huicustomVPC/publicSubnetSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "huicustomVPCpublicSubnetSubnet2RouteTable6BF91CCD",
+            "trace": [
+              "new Subnet (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:724:23)",
+              "new PublicSubnet (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:873:9)",
+              "/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:606:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:590:32)",
+              "Vpc.createSubnets (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:581:18)",
+              "new Vpc (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:405:14)",
+              "/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8795:24)",
+              "Kernel._create (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8367:34)",
+              "Kernel.create (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9692:36)",
+              "KernelHost.run (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/my-custom-vpc-stack/huicustomVPC/publicSubnetSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "huicustomVPCpublicSubnetSubnet2RouteTableAssociationEC991CBA",
+            "trace": [
+              "new Subnet (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:729:9)",
+              "new PublicSubnet (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:873:9)",
+              "/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:606:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:590:32)",
+              "Vpc.createSubnets (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:581:18)",
+              "new Vpc (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:405:14)",
+              "/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8795:24)",
+              "Kernel._create (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8367:34)",
+              "Kernel.create (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9692:36)",
+              "KernelHost.run (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/my-custom-vpc-stack/huicustomVPC/publicSubnetSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "huicustomVPCpublicSubnetSubnet2DefaultRouteAAF92AB1",
+            "trace": [
+              "PublicSubnet.addDefaultInternetRoute (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:764:23)",
+              "/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:417:30",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:416:32)",
+              "/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8795:24)",
+              "Kernel._create (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8367:34)",
+              "Kernel.create (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9692:36)",
+              "KernelHost.run (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/my-custom-vpc-stack/huicustomVPC/privateSubnetSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "huicustomVPCprivateSubnetSubnet1Subnet1C00E196",
+            "trace": [
+              "new Subnet (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:708:24)",
+              "new PrivateSubnet (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:913:9)",
+              "/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:611:43",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:590:32)",
+              "Vpc.createSubnets (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:581:18)",
+              "new Vpc (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:405:14)",
+              "/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8795:24)",
+              "Kernel._create (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8367:34)",
+              "Kernel.create (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9692:36)",
+              "KernelHost.run (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/my-custom-vpc-stack/huicustomVPC/privateSubnetSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "huicustomVPCprivateSubnetSubnet1RouteTable96A3404D",
+            "trace": [
+              "new Subnet (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:724:23)",
+              "new PrivateSubnet (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:913:9)",
+              "/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:611:43",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:590:32)",
+              "Vpc.createSubnets (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:581:18)",
+              "new Vpc (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:405:14)",
+              "/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8795:24)",
+              "Kernel._create (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8367:34)",
+              "Kernel.create (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9692:36)",
+              "KernelHost.run (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/my-custom-vpc-stack/huicustomVPC/privateSubnetSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "huicustomVPCprivateSubnetSubnet1RouteTableAssociation36C4BD9E",
+            "trace": [
+              "new Subnet (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:729:9)",
+              "new PrivateSubnet (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:913:9)",
+              "/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:611:43",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:590:32)",
+              "Vpc.createSubnets (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:581:18)",
+              "new Vpc (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:405:14)",
+              "/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8795:24)",
+              "Kernel._create (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8367:34)",
+              "Kernel.create (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9692:36)",
+              "KernelHost.run (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/my-custom-vpc-stack/huicustomVPC/privateSubnetSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "huicustomVPCprivateSubnetSubnet1DefaultRoute94258089",
+            "trace": [
+              "PrivateSubnet.addRoute (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:811:23)",
+              "NatGatewayProvider.configureSubnet (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/nat.js:97:16)",
+              "NatGatewayProvider.configureNat (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/nat.js:91:18)",
+              "Vpc.createNatGateways (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:564:18)",
+              "new Vpc (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:422:22)",
+              "/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8795:24)",
+              "Kernel._create (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8367:34)",
+              "Kernel.create (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9692:36)",
+              "KernelHost.run (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/my-custom-vpc-stack/huicustomVPC/privateSubnetSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "huicustomVPCprivateSubnetSubnet2Subnet53E73EE7",
+            "trace": [
+              "new Subnet (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:708:24)",
+              "new PrivateSubnet (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:913:9)",
+              "/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:611:43",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:590:32)",
+              "Vpc.createSubnets (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:581:18)",
+              "new Vpc (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:405:14)",
+              "/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8795:24)",
+              "Kernel._create (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8367:34)",
+              "Kernel.create (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9692:36)",
+              "KernelHost.run (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/my-custom-vpc-stack/huicustomVPC/privateSubnetSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "huicustomVPCprivateSubnetSubnet2RouteTable07061063",
+            "trace": [
+              "new Subnet (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:724:23)",
+              "new PrivateSubnet (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:913:9)",
+              "/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:611:43",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:590:32)",
+              "Vpc.createSubnets (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:581:18)",
+              "new Vpc (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:405:14)",
+              "/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8795:24)",
+              "Kernel._create (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8367:34)",
+              "Kernel.create (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9692:36)",
+              "KernelHost.run (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/my-custom-vpc-stack/huicustomVPC/privateSubnetSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "huicustomVPCprivateSubnetSubnet2RouteTableAssociation49B43F10",
+            "trace": [
+              "new Subnet (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:729:9)",
+              "new PrivateSubnet (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:913:9)",
+              "/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:611:43",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:590:32)",
+              "Vpc.createSubnets (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:581:18)",
+              "new Vpc (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:405:14)",
+              "/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8795:24)",
+              "Kernel._create (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8367:34)",
+              "Kernel.create (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9692:36)",
+              "KernelHost.run (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/my-custom-vpc-stack/huicustomVPC/privateSubnetSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "huicustomVPCprivateSubnetSubnet2DefaultRoute67A94314",
+            "trace": [
+              "PrivateSubnet.addRoute (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:811:23)",
+              "NatGatewayProvider.configureSubnet (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/nat.js:97:16)",
+              "NatGatewayProvider.configureNat (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/nat.js:91:18)",
+              "Vpc.createNatGateways (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:564:18)",
+              "new Vpc (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:422:22)",
+              "/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8795:24)",
+              "Kernel._create (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8367:34)",
+              "Kernel.create (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9692:36)",
+              "KernelHost.run (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/my-custom-vpc-stack/huicustomVPC/dbSubnetSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "huicustomVPCdbSubnetSubnet1SubnetFB1A7B50",
+            "trace": [
+              "new Subnet (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:708:24)",
+              "new PrivateSubnet (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:913:9)",
+              "/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:616:44",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:590:32)",
+              "Vpc.createSubnets (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:581:18)",
+              "new Vpc (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:405:14)",
+              "/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8795:24)",
+              "Kernel._create (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8367:34)",
+              "Kernel.create (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9692:36)",
+              "KernelHost.run (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/my-custom-vpc-stack/huicustomVPC/dbSubnetSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "huicustomVPCdbSubnetSubnet1RouteTable14FD04A9",
+            "trace": [
+              "new Subnet (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:724:23)",
+              "new PrivateSubnet (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:913:9)",
+              "/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:616:44",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:590:32)",
+              "Vpc.createSubnets (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:581:18)",
+              "new Vpc (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:405:14)",
+              "/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8795:24)",
+              "Kernel._create (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8367:34)",
+              "Kernel.create (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9692:36)",
+              "KernelHost.run (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/my-custom-vpc-stack/huicustomVPC/dbSubnetSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "huicustomVPCdbSubnetSubnet1RouteTableAssociationB565A055",
+            "trace": [
+              "new Subnet (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:729:9)",
+              "new PrivateSubnet (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:913:9)",
+              "/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:616:44",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:590:32)",
+              "Vpc.createSubnets (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:581:18)",
+              "new Vpc (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:405:14)",
+              "/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8795:24)",
+              "Kernel._create (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8367:34)",
+              "Kernel.create (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9692:36)",
+              "KernelHost.run (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/my-custom-vpc-stack/huicustomVPC/dbSubnetSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "huicustomVPCdbSubnetSubnet2SubnetC6F912A4",
+            "trace": [
+              "new Subnet (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:708:24)",
+              "new PrivateSubnet (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:913:9)",
+              "/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:616:44",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:590:32)",
+              "Vpc.createSubnets (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:581:18)",
+              "new Vpc (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:405:14)",
+              "/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8795:24)",
+              "Kernel._create (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8367:34)",
+              "Kernel.create (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9692:36)",
+              "KernelHost.run (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/my-custom-vpc-stack/huicustomVPC/dbSubnetSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "huicustomVPCdbSubnetSubnet2RouteTable18311A9E",
+            "trace": [
+              "new Subnet (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:724:23)",
+              "new PrivateSubnet (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:913:9)",
+              "/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:616:44",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:590:32)",
+              "Vpc.createSubnets (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:581:18)",
+              "new Vpc (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:405:14)",
+              "/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8795:24)",
+              "Kernel._create (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8367:34)",
+              "Kernel.create (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9692:36)",
+              "KernelHost.run (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/my-custom-vpc-stack/huicustomVPC/dbSubnetSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "huicustomVPCdbSubnetSubnet2RouteTableAssociationD841D304",
+            "trace": [
+              "new Subnet (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:729:9)",
+              "new PrivateSubnet (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:913:9)",
+              "/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:616:44",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:590:32)",
+              "Vpc.createSubnets (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:581:18)",
+              "new Vpc (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:405:14)",
+              "/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8795:24)",
+              "Kernel._create (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8367:34)",
+              "Kernel.create (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9692:36)",
+              "KernelHost.run (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/my-custom-vpc-stack/huicustomVPC/IGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "huicustomVPCIGW4D8ADFBE",
+            "trace": [
+              "new Vpc (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:409:25)",
+              "/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8795:24)",
+              "Kernel._create (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8367:34)",
+              "Kernel.create (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9692:36)",
+              "KernelHost.run (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/my-custom-vpc-stack/huicustomVPC/VPCGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "huicustomVPCVPCGW19B9A225",
+            "trace": [
+              "new Vpc (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:412:25)",
+              "/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8795:24)",
+              "Kernel._create (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8367:34)",
+              "Kernel.create (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9692:36)",
+              "KernelHost.run (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/my-custom-vpc-stack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/core/lib/private/metadata-resource.js:22:30)",
+              "/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/core/lib/private/synthesis.js:139:9",
+              "visit (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/core/lib/private/synthesis.js:200:9)",
+              "visit (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/core/lib/private/synthesis.js:197:9)",
+              "injectMetadataResources (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/core/lib/private/synthesis.js:128:5)",
+              "Object.synthesize (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/core/lib/private/synthesis.js:17:5)",
+              "App.synth (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8183:134",
+              "Kernel._wrapSandboxCode (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8795:24)",
+              "/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8183:107",
+              "Kernel._ensureSync (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8776:28)",
+              "Kernel.invoke (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8183:34)",
+              "KernelHost.processRequest (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9692:36)",
+              "KernelHost.run (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/my-custom-vpc-stack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable",
+            "trace": [
+              "new MetadataResource (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/core/lib/private/metadata-resource.js:30:35)",
+              "/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/core/lib/private/synthesis.js:139:9",
+              "visit (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/core/lib/private/synthesis.js:200:9)",
+              "visit (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/core/lib/private/synthesis.js:197:9)",
+              "injectMetadataResources (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/core/lib/private/synthesis.js:128:5)",
+              "Object.synthesize (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/core/lib/private/synthesis.js:17:5)",
+              "App.synth (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/jsii-kernel-KXkzCl/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8183:134",
+              "Kernel._wrapSandboxCode (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8795:24)",
+              "/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8183:107",
+              "Kernel._ensureSync (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8776:28)",
+              "Kernel.invoke (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:8183:34)",
+              "KernelHost.processRequest (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9692:36)",
+              "KernelHost.run (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/private/var/folders/pw/v919xl9d2_9f12cr24y1cs3w0000gn/T/tmpuwfow1x6/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ]
+      },
+      "displayName": "my-custom-vpc-stack"
+    }
+  }
+}
