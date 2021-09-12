@@ -6,7 +6,8 @@ from aws_cdk import core as cdk
 # being updated to use `cdk`.  You may delete this import if you don't need it.
 from aws_cdk import (
     core,
-    aws_ec2 as _ec2
+    aws_ec2 as _ec2,
+    aws_iam as _iam
 )
 
 
@@ -61,5 +62,19 @@ class AwsCdkEc2Stack(cdk.Stack):
         #allow web traffic inbound
         hui_ec2.connections.allow_from_any_ipv4(
             _ec2.Port.tcp(80), description="Allow Web Traffic"
+        )
+
+        #ec2 iam role instance profile
+        hui_ec2.role.add_managed_policy(
+            _iam.ManagedPolicy.from_aws_managed_policy_name(
+                "AmazonSSMManagedInstanceCore"
+            )
+        )
+
+        #ec2 iam s3bucket access role
+        hui_ec2.role.add_managed_policy(
+            _iam.ManagedPolicy.from_aws_managed_policy_name(
+                "AmazonS3FullAccess"
+            )
         )
     
