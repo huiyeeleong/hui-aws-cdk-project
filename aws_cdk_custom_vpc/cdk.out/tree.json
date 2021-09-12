@@ -32,8 +32,16 @@
                     "instanceTenancy": "default",
                     "tags": [
                       {
+                        "key": "Billing",
+                        "value": "HuiApplication"
+                      },
+                      {
                         "key": "Name",
                         "value": "my-custom-vpc-stack/huicustomVPC"
+                      },
+                      {
+                        "key": "owner",
+                        "value": "hui"
                       }
                     ]
                   }
@@ -76,8 +84,16 @@
                             "value": "Public"
                           },
                           {
+                            "key": "Billing",
+                            "value": "HuiApplication"
+                          },
+                          {
                             "key": "Name",
                             "value": "my-custom-vpc-stack/huicustomVPC/publicSubnetSubnet1"
+                          },
+                          {
+                            "key": "owner",
+                            "value": "hui"
                           }
                         ]
                       }
@@ -106,8 +122,16 @@
                         },
                         "tags": [
                           {
+                            "key": "Billing",
+                            "value": "HuiApplication"
+                          },
+                          {
                             "key": "Name",
                             "value": "my-custom-vpc-stack/huicustomVPC/publicSubnetSubnet1"
+                          },
+                          {
+                            "key": "owner",
+                            "value": "hui"
                           }
                         ]
                       }
@@ -165,8 +189,16 @@
                         "domain": "vpc",
                         "tags": [
                           {
+                            "key": "Billing",
+                            "value": "HuiApplication"
+                          },
+                          {
                             "key": "Name",
                             "value": "my-custom-vpc-stack/huicustomVPC/publicSubnetSubnet1"
+                          },
+                          {
+                            "key": "owner",
+                            "value": "hui"
                           }
                         ]
                       }
@@ -193,8 +225,16 @@
                         },
                         "tags": [
                           {
+                            "key": "Billing",
+                            "value": "HuiApplication"
+                          },
+                          {
                             "key": "Name",
                             "value": "my-custom-vpc-stack/huicustomVPC/publicSubnetSubnet1"
+                          },
+                          {
+                            "key": "owner",
+                            "value": "hui"
                           }
                         ]
                       }
@@ -243,8 +283,16 @@
                             "value": "Public"
                           },
                           {
+                            "key": "Billing",
+                            "value": "HuiApplication"
+                          },
+                          {
                             "key": "Name",
                             "value": "my-custom-vpc-stack/huicustomVPC/publicSubnetSubnet2"
+                          },
+                          {
+                            "key": "owner",
+                            "value": "hui"
                           }
                         ]
                       }
@@ -273,8 +321,16 @@
                         },
                         "tags": [
                           {
+                            "key": "Billing",
+                            "value": "HuiApplication"
+                          },
+                          {
                             "key": "Name",
                             "value": "my-custom-vpc-stack/huicustomVPC/publicSubnetSubnet2"
+                          },
+                          {
+                            "key": "owner",
+                            "value": "hui"
                           }
                         ]
                       }
@@ -362,8 +418,16 @@
                             "value": "Private"
                           },
                           {
+                            "key": "Billing",
+                            "value": "HuiApplication"
+                          },
+                          {
                             "key": "Name",
                             "value": "my-custom-vpc-stack/huicustomVPC/privateSubnetSubnet1"
+                          },
+                          {
+                            "key": "owner",
+                            "value": "hui"
                           }
                         ]
                       }
@@ -392,8 +456,16 @@
                         },
                         "tags": [
                           {
+                            "key": "Billing",
+                            "value": "HuiApplication"
+                          },
+                          {
                             "key": "Name",
                             "value": "my-custom-vpc-stack/huicustomVPC/privateSubnetSubnet1"
+                          },
+                          {
+                            "key": "owner",
+                            "value": "hui"
                           }
                         ]
                       }
@@ -481,8 +553,16 @@
                             "value": "Private"
                           },
                           {
+                            "key": "Billing",
+                            "value": "HuiApplication"
+                          },
+                          {
                             "key": "Name",
                             "value": "my-custom-vpc-stack/huicustomVPC/privateSubnetSubnet2"
+                          },
+                          {
+                            "key": "owner",
+                            "value": "hui"
                           }
                         ]
                       }
@@ -511,8 +591,16 @@
                         },
                         "tags": [
                           {
+                            "key": "Billing",
+                            "value": "HuiApplication"
+                          },
+                          {
                             "key": "Name",
                             "value": "my-custom-vpc-stack/huicustomVPC/privateSubnetSubnet2"
+                          },
+                          {
+                            "key": "owner",
+                            "value": "hui"
                           }
                         ]
                       }
@@ -600,8 +688,16 @@
                             "value": "Isolated"
                           },
                           {
+                            "key": "Billing",
+                            "value": "HuiApplication"
+                          },
+                          {
                             "key": "Name",
                             "value": "my-custom-vpc-stack/huicustomVPC/dbSubnetSubnet1"
+                          },
+                          {
+                            "key": "owner",
+                            "value": "hui"
                           }
                         ]
                       }
@@ -630,8 +726,16 @@
                         },
                         "tags": [
                           {
+                            "key": "Billing",
+                            "value": "HuiApplication"
+                          },
+                          {
                             "key": "Name",
                             "value": "my-custom-vpc-stack/huicustomVPC/dbSubnetSubnet1"
+                          },
+                          {
+                            "key": "owner",
+                            "value": "hui"
                           }
                         ]
                       }
@@ -699,8 +803,16 @@
                             "value": "Isolated"
                           },
                           {
+                            "key": "Billing",
+                            "value": "HuiApplication"
+                          },
+                          {
                             "key": "Name",
                             "value": "my-custom-vpc-stack/huicustomVPC/dbSubnetSubnet2"
+                          },
+                          {
+                            "key": "owner",
+                            "value": "hui"
                           }
                         ]
                       }
@@ -729,8 +841,16 @@
                         },
                         "tags": [
                           {
+                            "key": "Billing",
+                            "value": "HuiApplication"
+                          },
+                          {
                             "key": "Name",
                             "value": "my-custom-vpc-stack/huicustomVPC/dbSubnetSubnet2"
+                          },
+                          {
+                            "key": "owner",
+                            "value": "hui"
                           }
                         ]
                       }
@@ -773,8 +893,16 @@
                   "aws:cdk:cloudformation:props": {
                     "tags": [
                       {
+                        "key": "Billing",
+                        "value": "HuiApplication"
+                      },
+                      {
                         "key": "Name",
                         "value": "my-custom-vpc-stack/huicustomVPC"
+                      },
+                      {
+                        "key": "owner",
+                        "value": "hui"
                       }
                     ]
                   }
@@ -806,6 +934,51 @@
             },
             "constructInfo": {
               "fqn": "@aws-cdk/aws-ec2.Vpc",
+              "version": "1.122.0"
+            }
+          },
+          "HuiBucketId": {
+            "id": "HuiBucketId",
+            "path": "my-custom-vpc-stack/HuiBucketId",
+            "children": {
+              "Notifications": {
+                "id": "Notifications",
+                "path": "my-custom-vpc-stack/HuiBucketId/Notifications",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.Construct",
+                  "version": "1.122.0"
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "my-custom-vpc-stack/HuiBucketId/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::S3::Bucket",
+                  "aws:cdk:cloudformation:props": {
+                    "tags": [
+                      {
+                        "key": "Billing",
+                        "value": "HuiBucket"
+                      },
+                      {
+                        "key": "Name",
+                        "value": "huiapplication"
+                      },
+                      {
+                        "key": "owner",
+                        "value": "hui"
+                      }
+                    ]
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-s3.CfnBucket",
+                  "version": "1.122.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-s3.Bucket",
               "version": "1.122.0"
             }
           },

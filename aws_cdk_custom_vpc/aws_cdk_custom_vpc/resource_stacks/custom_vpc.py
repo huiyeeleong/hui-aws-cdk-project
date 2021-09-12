@@ -1,7 +1,8 @@
 from aws_cdk import core as cdk
 from aws_cdk import (
     core,
-    aws_ec2 as _ec2 
+    aws_ec2 as _ec2,
+    aws_s3 as _s3
 )
 
 
@@ -37,8 +38,13 @@ class HuiCustomVpcStack(cdk.Stack):
             ]
         )
 
-        
-        #Tag the resources
-        core.Tag.add(custom_vpc, "Owner", "Hui", "Billing", "HuiApplication")
+        #Tag the VPC resources
+        core.Tag.add(custom_vpc, "Billing", "HuiApplication")
 
-        
+        huibucket = _s3.Bucket(
+            self,
+            "HuiBucketId"
+        )
+
+        core.Tag.add(huibucket, "Billing", "HuiBucket")
+

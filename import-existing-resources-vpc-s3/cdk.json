@@ -14,10 +14,9 @@
     "@aws-cdk/aws-efs:defaultEncryptionAtRest": true,
     "@aws-cdk/aws-lambda:recognizeVersionProps": true,
     "@aws-cdk/aws-cloudfront:defaultSecurityPolicyTLSv1.2_2021": true,
-
+    
     "envs":{
       "dev":{
-        "name": "huiapplication",
         "region": "ap-southeast-2",
         "account": "673569942958",
         "vpc_configs":{
@@ -25,7 +24,7 @@
           "cidr_mask": 24,
           "set_reserve": false
         }      
-      }
     }
   }
+}
 }

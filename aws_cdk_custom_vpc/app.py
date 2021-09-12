@@ -11,4 +11,11 @@ app = core.App()
 
 HuiCustomVpcStack(app, "my-custom-vpc-stack")
 
+#add tag for whole stack
+#Reference from cdk.json
+core.Tag.add(app, key="Name", value=app.node.try_get_context('envs')['dev']['name'])
+#Tag straight away
+core.Tag.add(app, key="owner", value="hui")
+
+
 app.synth()
