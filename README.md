@@ -8,9 +8,13 @@ Here you will learn to use CDK to deploy different AWS resources.
 🛠 AWS CDK Installed & Configured - https://docs.aws.amazon.com/cdk/latest/guide/getting_started.html
 
 🛠 Python Packages, Change the below commands to suit your operating system, the following are written for _Amazon Linux 2
+
 Python3 - yum install -y python3
+
 Python Pip - yum install -y python-pip
+
 Virtualenv - pip3 install virtualenv
+
 
 🚀 Deployment using AWS CDK
 # If you DONT have cdk installed
