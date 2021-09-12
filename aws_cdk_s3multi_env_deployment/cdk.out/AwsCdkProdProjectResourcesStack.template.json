@@ -1,0 +1,35 @@
+{
+  "Resources": {
+    "myProdBucketArctifact12333A9B662": {
+      "Type": "AWS::S3::Bucket",
+      "Properties": {
+        "BucketEncryption": {
+          "ServerSideEncryptionConfiguration": [
+            {
+              "ServerSideEncryptionByDefault": {
+                "SSEAlgorithm": "AES256"
+              }
+            }
+          ]
+        },
+        "VersioningConfiguration": {
+          "Status": "Enabled"
+        }
+      },
+      "UpdateReplacePolicy": "Retain",
+      "DeletionPolicy": "Retain",
+      "Metadata": {
+        "aws:cdk:path": "AwsCdkProdProjectResourcesStack/myProdBucketArctifact123/Resource"
+      }
+    },
+    "CDKMetadata": {
+      "Type": "AWS::CDK::Metadata",
+      "Properties": {
+        "Analytics": "v2:deflate64:H4sIAAAAAAAA/yWKQQqDMBAA35J7XGu8eJTmA8W+QNYVY2gC2Q1FQv4u6mkGZjrojIGXGuc/N7j4tmBMBOUrM3ptY2BJGUXbNUzEMSekqq+XeyjvjJ7u9lit+nPIFkPbwwBG7exck3IQ9yOYHp4AqxpOcQAAAA=="
+      },
+      "Metadata": {
+        "aws:cdk:path": "AwsCdkProdProjectResourcesStack/CDKMetadata/Default"
+      }
+    }
+  }
+}

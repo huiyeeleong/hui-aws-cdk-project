@@ -1,0 +1,7 @@
+README.md
+setup.py
+aws_cdk_project_resources/aws_cdk_project_resources.egg-info/PKG-INFO
+aws_cdk_project_resources/aws_cdk_project_resources.egg-info/SOURCES.txt
+aws_cdk_project_resources/aws_cdk_project_resources.egg-info/dependency_links.txt
+aws_cdk_project_resources/aws_cdk_project_resources.egg-info/requires.txt
+aws_cdk_project_resources/aws_cdk_project_resources.egg-info/top_level.txt
