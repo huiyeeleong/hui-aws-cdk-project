@@ -1,5 +1,6 @@
 Welcome to my first CDK project.
-Here you will learn to use CDK to deploy different AWS resources. 
+
+Please remember run AWS Configure to use the AWS CDK Environment.
 
 🧰 Prerequisites
 
