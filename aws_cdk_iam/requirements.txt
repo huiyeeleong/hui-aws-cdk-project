@@ -1,0 +1,4 @@
+-e .
+aws_cdk.aws_iam
+aws_cdk.aws_secretsmanager
+aws_cdk.aws_ssm
