@@ -16,10 +16,13 @@ app.synth()
 env_dev= core.Environment(account="673569942958", region="ap-southeast-2")
 
 #Import Stack consist with Custom VPC , App Stack and DB stack
-vpc_tier_stack = AwsCdk3TierVPCStack(app, "AwsCdk3VPCAppStack", env=env_dev)
-app_tier_stack = AwsCdk3TierAppStack(app, "AwsCdk3TierAppStack", env=env_dev, vpc=vpc_tier_stack.vpc)
+vpc_tier_stack = AwsCdk3TierVPCStack(app, "AwsCdk3VPCAppStack" )
+app_tier_stack = AwsCdk3TierAppStack(app, "AwsCdk3TierAppStack", vpc=vpc_tier_stack.vpc)
 
-#db_tier_stack = AwsCdk3TierRDSStack(app, "AwsCdk3TierRDSStack", env=env_dev, vpc=vpc)
+db_tier_stack = AwsCdk3TierRDSStack(app, "AwsCdk3TierRDSStack",  
+vpc=vpc_tier_stack,
+asg_security_groups=app_tier_stack.web_server_asg.connections.security_groups,
+description = "Create Custom RDS Database")
 
 
 

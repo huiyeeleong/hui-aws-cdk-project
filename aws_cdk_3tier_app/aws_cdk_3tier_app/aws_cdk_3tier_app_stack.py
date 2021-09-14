@@ -70,7 +70,7 @@ class AwsCdk3TierAppStack(cdk.Stack):
         )
 
         #Create ASG for 2 Instances
-        hui_web_server_asg = _autoscaling.AutoScalingGroup(
+        self.web_server_asg = _autoscaling.AutoScalingGroup(
             self,
             "HuiWebServerASGId",
             vpc=vpc,
@@ -90,7 +90,7 @@ class AwsCdk3TierAppStack(cdk.Stack):
             )
 
         #Add ASG instance to ALB target group
-        hui_web_server_asg.connections.allow_from(
+        self.web_server_asg.connections.allow_from(
             alb, _ec2.Port.tcp(80),
             description="Allows ASG Security Group receive traffic from ALB"
         )
@@ -99,7 +99,7 @@ class AwsCdk3TierAppStack(cdk.Stack):
         listener.add_targets(
             "listenerId",
             port=80,
-            targets=[hui_web_server_asg]
+            targets=[self.web_server_asg]
         )
 
         #Out CFN Stack the ALB domain name
