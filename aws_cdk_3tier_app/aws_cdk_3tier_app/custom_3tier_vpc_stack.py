@@ -13,7 +13,7 @@ class AwsCdk3TierVPCStack(cdk.Stack):
 
         # The code that defines your stack goes here
         #Create Custom 3tier VPC Stack
-        hui_vpc = _ec2.Vpc(
+        self.vpc = _ec2.Vpc(
             self,
             "huicustomVPCId",
             cidr="10.10.0.0/16",
@@ -35,7 +35,7 @@ class AwsCdk3TierVPCStack(cdk.Stack):
         core.CfnOutput(
             self,
             "HuiVPCOutput",
-            value=hui_vpc.vpc_id,
+            value= self.vpc.vpc_id,
             export_name="VPCId"
         )
         
