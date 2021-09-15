@@ -6,9 +6,11 @@ from aws_cdk import core
 
 from aws_cdk_serverless_event_processor.aws_cdk_serverless_event_processor_stack import AwsCdkServerlessEventProcessorStack
 from aws_cdk_serverless_event_processor.read_lambda_src_from_s3 import ReadLambdaSrcFromS3Stack
+from aws_cdk_serverless_event_processor.aws_cdk_lambda_cron import AWSCdkLambdaCronStack
 
 app = core.App()
 AwsCdkServerlessEventProcessorStack(app, "AwsCdkServerlessEventProcessorStack")
 ReadLambdaSrcFromS3Stack(app,"ReadLambdaSrcFromS3Stack")
+AWSCdkLambdaCronStack(app,"AWSCdkLambdaCronStack")
 
 app.synth()
