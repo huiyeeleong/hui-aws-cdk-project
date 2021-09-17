@@ -40,7 +40,7 @@ class AwsCloudwatchCustomMetrics(core.Stack):
         # create custom log group
         # /aws/lambda/function-name
         hui_custome_metric_lg = _logs.LogGroup(self,
-                                                   "konstoneLoggroup",
+                                                   "HuiLoggroup",
                                                    log_group_name=f"/aws/lambda/{hui_fn.function_name}",
                                                    removal_policy=core.RemovalPolicy.DESTROY,
                                                    retention=_logs.RetentionDays.ONE_DAY,
@@ -81,3 +81,5 @@ class AwsCloudwatchCustomMetrics(core.Stack):
             period=core.Duration.minutes(1),
             treat_missing_data=_cloudwatch.TreatMissingData.NOT_BREACHING
         )
+
+
