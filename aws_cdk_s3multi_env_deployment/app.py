@@ -14,13 +14,18 @@ from aws_cdk_project_resources.aws_cdk_project_resources_stack import AwsCdkProj
 app = core.App()
 
 #Get context
-env_aus = core.Environment(account=app.node.try_get_context('dev')['account'], 
-region=app.node.try_get_context('dev')['region'])
+#env_aus = core.Environment(account=app.node.try_get_context('dev')['account'], 
+#region=app.node.try_get_context('dev')['region'])
 
-print(env_aus)
+#labs
+env_nonprod = core.Environment(account="673569942958", region="ap-southeast-2")
 
-AwsCdkProjectResourcesStack(app, "AwsCdkProjectResourcesStack", env=env_aus)
-AwsCdkProjectResourcesStack(app, "AwsCdkProdProjectResourcesStack", is_prod=True, env=env_aus)
+#mft-nonprod
+env_prod = core.Environment(account="447302848060", region="ap-southeast-2")
+
+
+AwsCdkProjectResourcesStack(app, "AwsCdkProjectResourcesStack", env=env_nonprod)
+AwsCdkProjectResourcesStack(app, "AwsCdkProdProjectResourcesStack", is_prod=True, env=env_prod)
 
 app.synth()
 

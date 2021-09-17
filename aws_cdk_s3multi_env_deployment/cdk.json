@@ -15,9 +15,16 @@
     "@aws-cdk/aws-lambda:recognizeVersionProps": true,
     "@aws-cdk/aws-cloudfront:defaultSecurityPolicyTLSv1.2_2021": true,
     
-    "dev":{
-      "region": "ap-southeast-2",
-      "account": "673569942958"
+    "envs":{
+      "dev":{
+        "region": "ap-southeast-2",
+        "account": "673569942958"
+      },
+      "prod":{
+        "region": "ap-southeast-2",
+        "account": "447302848060"
+      }
     }
+    
   }
 }
