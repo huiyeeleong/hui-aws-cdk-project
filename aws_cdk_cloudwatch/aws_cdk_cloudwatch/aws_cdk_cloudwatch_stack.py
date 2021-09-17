@@ -95,7 +95,7 @@ class AwsCdkCloudwatchStack(cdk.Stack):
         # Read Lambda Code from my local pc
         try:
             with open("/Users/huiyeeleong/Desktop/hui-aws-cdk-project/aws_cdk_cloudwatch/aws_cdk_cloudwatch/hui_example_lambda.py", mode="r") as f:
-                konstone_fn_code = f.read()
+                hui_fn_code = f.read()
         except OSError:
             print("Unable to read Lambda Function Code")
 
@@ -106,7 +106,7 @@ class AwsCdkCloudwatchStack(cdk.Stack):
                                        runtime=_lambda.Runtime.PYTHON_3_7,
                                        handler="index.lambda_handler",
                                        code=_lambda.InlineCode(
-                                           konstone_fn_code),
+                                           hui_fn_code),
                                        timeout=core.Duration.seconds(3),
                                        reserved_concurrent_executions=1,
                                        environment={
@@ -149,7 +149,7 @@ class AwsCdkCloudwatchStack(cdk.Stack):
         )
 
         # Create Lambda Alarm
-        konstone_fn_error_alarm = _cloudwatch.Alarm(
+        hui_fn_error_alarm = _cloudwatch.Alarm(
             self,
             "konstoneFunctionErrorAlarm",
             metric=huifn.metric_errors(),
@@ -160,7 +160,7 @@ class AwsCdkCloudwatchStack(cdk.Stack):
         )
 
         # Inform SNS on Lambda Alarm State
-        konstone_fn_error_alarm.add_alarm_action(
+        hui_fn_error_alarm.add_alarm_action(
             _cloudwatch_actions.SnsAction(
                 hui_ops_team
             )
