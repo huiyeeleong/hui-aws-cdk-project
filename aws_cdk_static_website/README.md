@@ -3,6 +3,10 @@
 
 This is a static website project for Python development with CDK.
 
+Website will look like this
+![image](https://user-images.githubusercontent.com/66815986/133872602-5d66da2c-4efc-4c6a-b7cd-121973dcdbb7.png)
+
+
 The `cdk.json` file tells the CDK Toolkit how to execute your app.
 
 This project is set up like a standard Python project.  The initialization
